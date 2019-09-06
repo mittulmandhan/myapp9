@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatabindingComponent,
-    DirComponent
+    DirComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
