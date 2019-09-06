@@ -1,0 +1,40 @@
+<h2>Directive</h2>
+<hr>
+
+
+<h4>ngIf</h4>
+<input type="number" [(ngModel)]="num" />
+
+<div *ngIf="num!=undefined && num%2==0">
+    Even Number
+</div>
+<div *ngIf="num!=undefined && num%2>0">
+    Odd Number
+</div>
+
+<h4>ngIf..else</h4>
+<div *ngIf="num!=undefined && num%2==0 then TemplIf; else templElse">
+
+</div>
+
+<ng-template #templIf>Even Number</ng-template>
+<ng-template #templElse>Odd Number</ng-template>
+
+<h4>ngSwitch</h4>
+<input type="text" [(ngModel)]="alphabet" />
+<div [ngSwitch]="alphabet">
+    <div *ngSwitchCase="'a'">Vowel</div>
+    <div *ngSwitchCase="'e'">Vowel</div>
+    <div *ngSwitchCase="'i'">Vowel</div>
+    <div *ngSwitchCase="'o'">Vowel</div>
+    <div *ngSwitchCase="'u'">Vowel</div>
+    <div *ngSwitchDefault>Not a Vowel</div>
+</div>
+
+<h4>ngFor</h4>
+<select [(ngModel)]="color">
+    <option [value]="''">--Select--</option>
+    <option *ngFor="let item of colors" [value]="item">{{item}}</option>
+</select>
+
+<p [ngStyle]="{'color': color}">This is my Paragraph</p>
