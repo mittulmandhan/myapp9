@@ -37,4 +37,7 @@
     <option *ngFor="let item of colors" [value]="item">{{item}}</option>
 </select>
 
+<h4>Class Directive</h4>
 <p [ngStyle]="{'color': color}">This is my Paragraph</p>
+
+<p [ngClass]="{'red-color': color==='red'}">This is my Paragraph</p>

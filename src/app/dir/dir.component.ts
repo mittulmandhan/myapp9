@@ -3,7 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-dir',
   templateUrl: './dir.component.html',
-  styles: []
+  styles: [`
+    .red-color {
+      color: red;
+    }
+  `]
 })
 export class DirComponent implements OnInit {
   num: number;
