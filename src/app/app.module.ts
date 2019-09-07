@@ -9,6 +9,9 @@ import { HighlightDirective } from './highlight.directive';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MembershipComponent } from './membership/membership.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CategoryComponent } from './category/category.component';
     HighlightDirective,
     NotfoundComponent,
     ProductComponent,
-    CategoryComponent
+    CategoryComponent,
+    AboutComponent,
+    ProfileComponent,
+    MembershipComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,9 @@ import { DirComponent } from './dir/dir.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MembershipComponent } from './membership/membership.component';
 
 
 const routes: Routes = [
@@ -13,6 +16,11 @@ const routes: Routes = [
   {path: 'product/:id', component: ProductComponent},
   {path: 'product', component: ProductComponent}, // optional params
   {path: 'category', component: CategoryComponent}, // Query params
+  {path: 'about', component: AboutComponent, children: [
+    {path: 'profile', component: ProfileComponent},
+    {path: 'membership', component: MembershipComponent}
+    ]
+  },
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];
