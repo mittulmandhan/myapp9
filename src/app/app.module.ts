@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HighlightDirective } from './highlight.directive';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatabindingComponent,
     DirComponent,
-    HighlightDirective
+    HighlightDirective,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
