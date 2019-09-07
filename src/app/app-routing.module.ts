@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: '', component: DatabindingComponent},
   {path: 'dir', component: DirComponent},
   {path: 'product/:id', component: ProductComponent},
+  {path: 'product', component: ProductComponent}, // optional params
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];

@@ -8,11 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
   id: number;
+  name: string;
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit() {
     this.router.params.subscribe((p) => {
       this.id = p.id;
+      this.name = p.name;
     });
   }
 
