@@ -14,6 +14,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ReversePipe } from './reverse.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ReversePipe } from './reverse.pipe';
     ProfileComponent,
     MembershipComponent,
     PipesComponent,
-    ReversePipe
+    ReversePipe,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
