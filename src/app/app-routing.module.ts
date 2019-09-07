@@ -8,6 +8,7 @@ import { CategoryComponent } from './category/category.component';
 import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
     {path: 'membership', component: MembershipComponent}
     ]
   },
+  {path: 'pipes', component: PipesComponent},
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];

@@ -1,0 +1,26 @@
+<h2>Pipes</h2>
+<hr>
+
+<div>
+    Data: {{employee|json}}
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Salary</th>
+            <th>Joining</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of employee; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.name | uppercase}}</td>
+            <td>{{item.address | lowercase}}</td>
+            <td>{{item.salary | currency:'INR'}}</td>
+            <td>{{item.joining | date:'dd/mm/yyyy'}}</td>
+        </tr>
+</table>

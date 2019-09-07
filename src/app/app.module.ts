@@ -12,6 +12,7 @@ import { CategoryComponent } from './category/category.component';
 import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MembershipComponent } from './membership/membership.component';
     CategoryComponent,
     AboutComponent,
     ProfileComponent,
-    MembershipComponent
+    MembershipComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
