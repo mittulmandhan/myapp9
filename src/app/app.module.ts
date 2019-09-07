@@ -8,6 +8,7 @@ import { DirComponent } from './dir/dir.component';
 import { HighlightDirective } from './highlight.directive';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductComponent } from './product/product.component';
     DirComponent,
     HighlightDirective,
     NotfoundComponent,
-    ProductComponent
+    ProductComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

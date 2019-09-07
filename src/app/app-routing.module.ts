@@ -4,6 +4,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
+import { CategoryComponent } from './category/category.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'dir', component: DirComponent},
   {path: 'product/:id', component: ProductComponent},
   {path: 'product', component: ProductComponent}, // optional params
+  {path: 'category', component: CategoryComponent}, // Query params
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];

@@ -12,6 +12,9 @@
         <li class="nav-item">
             <a class="nav-link" [routerLink]="['/product', {id:2, name:'ebook'}]">Product-optional</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/category']" [queryParams]="{id:2, name:'ebook'}">Category</a>
+        </li>
     </ul>
 </nav>
 
