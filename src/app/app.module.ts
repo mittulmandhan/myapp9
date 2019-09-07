@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PipesComponent } from './pipes/pipes.component';
     AboutComponent,
     ProfileComponent,
     MembershipComponent,
-    PipesComponent
+    PipesComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
