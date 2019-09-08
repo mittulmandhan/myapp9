@@ -19,19 +19,21 @@
     </div>
 
     <div>
-        Password: <input type="text" name="password" #password="ngModel" [(ngModel)]="user.password" required minlength="6" />
+        Password: <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" required minlength="6" />
         <p *ngIf="password.errors && (myform.submitted || password.touched)" class="text-danger">
             <span [hidden]="!password.errors.required">Please Enter password</span>
-            <span [hidden]="!password.errors.email">password must have atleast 6 characters</span>
+            <span [hidden]="!password.errors.minlength">password must have atleast 6 characters</span>
         </p>
     </div>
 
     <div>
-        Confirm Password: <input type="text" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="user.confirmPassword" required minlength="6" />
+        Confirm Password: <input type="password" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="user.confirmPassword" required validateEqualTo="password" />
         <p *ngIf="confirmPassword.errors && (myform.submitted || confirmPassword.touched)" class="text-danger">
             <span [hidden]="!confirmPassword.errors.required">Please Enter confirm password</span>
-
-            <span [hidden]="!confirmPassword.errors.email">password must have atleast 6 characters</span>
+            <!-- we dont have any built-in validation for comparing 2 text boxes -->
+            <!-- so we need to create our own custom validator or we can use 3rd party packages as well -->
+            <!-- so here we are going to download & use packages from npmjs.com -->
+            <span [hidden]="!(!confirmPassword.errors.required && confirmPassword.errors?.validateEqual)">confirm password does not match</span>
         </p>
     </div>
 

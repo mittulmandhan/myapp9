@@ -19,6 +19,7 @@ import { ChildComponent } from './child/child.component';
 import { MasterComponent } from './master/master.component';
 import { DetailsComponent } from './details/details.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { EqualTextValidator } from 'angular2-text-equality-validator';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TemplateformComponent } from './templateform/templateform.component';
     ChildComponent,
     MasterComponent,
     DetailsComponent,
-    TemplateformComponent
+    TemplateformComponent,
+    EqualTextValidator
   ],
   imports: [
     BrowserModule,
