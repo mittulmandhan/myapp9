@@ -38,6 +38,20 @@
     </div>
 
     <div>
+        Contact No.: <input type="text" name="contactNo" #contactNo="ngModel" [(ngModel)]="user.contactNo" pattern="^[6,7,8,9]\d{9}$" />
+        <p *ngIf="contactNo.errors && (myform.submitted || contactNo.dirty)" class="text-danger">
+            <span [hidden]="!contactNo.errors.pattern">Please Enter correct contact No.</span>
+        </p>
+    </div>
+
+    <div>
+        Accept Terms : <input type="checkbox" name="terms" #terms="ngModel" [(ngModel)]="user.terms" required />
+        <p *ngIf="terms.errors && (myform.submitted || terms.touched)" class="text-danger">
+            <span [hidden]="!terms.errors.required">Please Accept terms</span>
+        </p>
+    </div>
+
+    <div>
         <input type="submit" value="Save" />
     </div>
 </form>

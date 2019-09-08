@@ -18,7 +18,8 @@ export class TemplateformComponent implements OnInit {
 
   Save(form: NgForm) {
     if (form.valid) {
-      alert('valid');
+      console.log(`form is valid!`);
+      console.log(this.user);
     }
   }
 

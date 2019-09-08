@@ -5,4 +5,5 @@ export class User {
     confirmPassword: string;
     address: string;
     contactNo: string;
+    terms: boolean;
 }
