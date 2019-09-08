@@ -18,6 +18,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { MasterComponent } from './master/master.component';
 import { DetailsComponent } from './details/details.component';
+import { TemplateformComponent } from './templateform/templateform.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DetailsComponent } from './details/details.component';
     ParentComponent,
     ChildComponent,
     MasterComponent,
-    DetailsComponent
+    DetailsComponent,
+    TemplateformComponent
   ],
   imports: [
     BrowserModule,

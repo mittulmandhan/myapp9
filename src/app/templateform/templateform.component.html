@@ -1,0 +1,41 @@
+<h2>Template Form</h2>
+<hr>
+
+<form #myform="ngForm">
+    <div>
+        Name: <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" required minlength="3" />
+        <p *ngIf="name.errors && (myform.submitted || name.touched)" class="text-danger">
+            <span [hidden]="!name.errors.required">Please Enter Name</span>
+            <span [hidden]="!name.errors.minlength">Name must have atleast 3 characters</span>
+        </p>
+    </div>
+
+    <div>
+        Email: <input type="text" name="email" #email="ngModel" [(ngModel)]="user.email" required email/>
+        <p *ngIf="email.errors && (myform.submitted || email.touched)" class="text-danger">
+            <span [hidden]="!email.errors.required">Please Enter Email</span>
+            <span [hidden]="!email.errors.email">Email is not correct</span>
+        </p>
+    </div>
+
+    <div>
+        Password: <input type="text" name="password" #password="ngModel" [(ngModel)]="user.password" required minlength="6" />
+        <p *ngIf="password.errors && (myform.submitted || password.touched)" class="text-danger">
+            <span [hidden]="!password.errors.required">Please Enter password</span>
+            <span [hidden]="!password.errors.email">password must have atleast 6 characters</span>
+        </p>
+    </div>
+
+    <div>
+        Confirm Password: <input type="text" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="user.confirmPassword" required minlength="6" />
+        <p *ngIf="confirmPassword.errors && (myform.submitted || confirmPassword.touched)" class="text-danger">
+            <span [hidden]="!confirmPassword.errors.required">Please Enter confirm password</span>
+
+            <span [hidden]="!confirmPassword.errors.email">password must have atleast 6 characters</span>
+        </p>
+    </div>
+
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</form>
