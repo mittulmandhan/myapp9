@@ -5,4 +5,4 @@
     <input [(ngModel)]="company" />
 </p>
 
-<app-details [myCompany]="company" [myMessage]="Greet($event)"></app-details>
+<app-details [myCompany]="company" (myMessage)="Greet($event)"></app-details>
