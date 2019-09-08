@@ -16,6 +16,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ReversePipe } from './reverse.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { MasterComponent } from './master/master.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ChildComponent } from './child/child.component';
     PipesComponent,
     ReversePipe,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    MasterComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

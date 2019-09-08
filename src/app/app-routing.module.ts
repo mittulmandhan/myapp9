@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ChildComponent } from './child/child.component';
+import { MasterComponent } from './master/master.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   },
   {path: 'pipes', component: PipesComponent},
   {path: 'inheritance', component: ChildComponent},
+  {path: 'nested', component: MasterComponent},
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];

@@ -1,0 +1,8 @@
+<h2>Master View</h2>
+<hr>
+<h3>{{company}}</h3>
+<p>
+    <input [(ngModel)]="company" />
+</p>
+
+<app-details [myCompany]="company" [myMessage]="Greet($event)"></app-details>
