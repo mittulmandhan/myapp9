@@ -37,6 +37,13 @@
         </p>
     </div>
     <div>
+        Url : <input type="text" name="url" formControlName="url" />
+        <p *ngIf="userForm.get('url').errors && (form.submitted || userForm.get('url').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('url').errors.required">Please Enter Email</span>
+            <span [hidden]="!userForm.get('url').errors.invalidUrl">Please enter correct Email</span>
+        </p>
+    </div>
+    <div>
         Accept Terms: <input type="checkbox" name="terms" formControlName="terms" />
         <p *ngIf="userForm.get('terms').errors && (form.submitted || userForm.get('terms').touched)" class="text-danger">
             <span [hidden]="!userForm.get('terms').errors.required">Please Accept Terms</span>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-modelform',
@@ -15,6 +15,7 @@ export class ModelformComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
       contactNo: ['', [Validators.required, Validators.pattern(`^[6,7,8,9]\\d{9}$`)]],
+      Url: [Validators.required.ValidateUrl],
       terms: ['', [Validators.required]]
     });
 
@@ -31,4 +32,10 @@ export class ModelformComponent implements OnInit {
     }
   }
 
+}
+
+function ValidateUrl(control: FormControl) {
+  if (control.value.startsWith('https')) {
+    return {invalidUrl: true} ;
+  }
 }
