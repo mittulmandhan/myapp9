@@ -39,8 +39,8 @@
     <div>
         Url : <input type="text" name="url" formControlName="url" />
         <p *ngIf="userForm.get('url').errors && (form.submitted || userForm.get('url').touched)" class="text-danger">
-            <span [hidden]="!userForm.get('url').errors.required">Please Enter Email</span>
-            <span [hidden]="!userForm.get('url').errors.invalidUrl">Please enter correct Email</span>
+            <span [hidden]="!userForm.get('url').errors.required">Please Enter Url</span>
+            <span [hidden]="!(!userForm.get('url').errors.required && userForm.get('url').errors.inValidUrl)">Url must start with https</span>
         </p>
     </div>
     <div>
