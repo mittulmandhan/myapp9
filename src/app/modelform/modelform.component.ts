@@ -17,6 +17,8 @@ export class ModelformComponent implements OnInit {
       contactNo: ['', [Validators.required, Validators.pattern(`^[6,7,8,9]\\d{9}$`)]],
       terms: ['', [Validators.required]]
     });
+
+    this.userForm.get('password').hasError('validateEqual');
   }
 
   ngOnInit() {
