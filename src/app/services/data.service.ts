@@ -8,6 +8,8 @@ export class DataService {
 
   constructor() {
     this.cities = ['Noida'];
+    // Noida is default city that all the instances will have initially
+    // after Noida new cities can be added
   }
   AddCity(city: string) {
     this.cities.push(city);
