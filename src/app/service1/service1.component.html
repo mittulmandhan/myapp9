@@ -1,0 +1,13 @@
+<h2>Service1 Component</h2>
+<hr>
+
+<ul>
+    <li *ngFor="let item of data">
+        {{item}}
+    </li>
+</ul>
+
+<p>
+    <input type="text" [(ngModel)]="city" />
+    <button type="button" (click)="Add()">Add</button>
+</p>

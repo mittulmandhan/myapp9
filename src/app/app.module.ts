@@ -21,6 +21,9 @@ import { DetailsComponent } from './details/details.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { EqualTextValidator } from 'angular2-text-equality-validator';
 import { ModelformComponent } from './modelform/modelform.component';
+import { Service1Component } from './service1/service1.component';
+import { Service2Component } from './service2/service2.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { ModelformComponent } from './modelform/modelform.component';
     DetailsComponent,
     TemplateformComponent,
     EqualTextValidator,
-    ModelformComponent
+    ModelformComponent,
+    Service1Component,
+    Service2Component
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,9 @@ import { ModelformComponent } from './modelform/modelform.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

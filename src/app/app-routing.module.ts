@@ -13,6 +13,8 @@ import { ChildComponent } from './child/child.component';
 import { MasterComponent } from './master/master.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { ModelformComponent } from './modelform/modelform.component';
+import { Service1Component } from './service1/service1.component';
+import { Service2Component } from './service2/service2.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,8 @@ const routes: Routes = [
   {path: 'nested', component: MasterComponent},
   {path: 'templateform', component: TemplateformComponent},
   {path: 'modelform', component: ModelformComponent},
+  {path: 'service1', component: Service1Component},
+  {path: 'service2', component: Service2Component},
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];
