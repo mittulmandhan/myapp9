@@ -12,6 +12,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ChildComponent } from './child/child.component';
 import { MasterComponent } from './master/master.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { ModelformComponent } from './modelform/modelform.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'inheritance', component: ChildComponent},
   {path: 'nested', component: MasterComponent},
   {path: 'templateform', component: TemplateformComponent},
+  {path: 'modelform', component: ModelformComponent},
   {path: 'notfound', component: NotfoundComponent},
   {path: '**', redirectTo: 'notfound' }
 ];

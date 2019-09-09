@@ -1,0 +1,48 @@
+<h2>Model Form</h2>
+<hr>
+
+<form #form="ngForm" [formGroup]="userForm" (ngSubmit)="SaveData()">
+    <div>
+        Name: <input type="text" name="name" formControlName="name" />
+        <p *ngIf="userForm.get('name').errors && (form.submitted || userForm.get('name').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('name').errors.required">Please Enter Name</span>
+            <span [hidden]="!userForm.get('name').errors.minlength">Name must have 3 characters</span>
+        </p>
+    </div>
+    <div>
+        Email : <input type="text" name="email" formControlName="email" />
+        <p *ngIf="userForm.get('email').errors && (form.submitted || userForm.get('email').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('email').errors.required">Please Enter Email</span>
+            <span [hidden]="!userForm.get('email').errors.email">Please enter correct Email</span>
+        </p>
+    </div>
+    <div>
+        Password: <input type="password" name="password" formControlName="password" />
+        <p *ngIf="userForm.get('password').errors && (form.submitted || userForm.get('password').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('password').errors.required">Please Enter Password</span>
+            <span [hidden]="!userForm.get('password').errors.minlength">Password must have 6 characters</span>
+        </p>
+    </div>
+    <div>
+        Confirm Password: <input type="password" name="confirmPassword" formControlName="confirmPassword" validateEqualTo="password" />
+        <p *ngIf="userForm.get('confirmPassword').errors && (form.submitted || userForm.get('confirmPassword').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('confirmPassword').errors.required">Please Confirm Password</span>
+            <span [hidden]="!userForm.get('confirmPassword').errors.hasError('validateEqual')">Confirm Password does not matched</span>
+        </p>
+    </div>
+    <div>
+        Contact: <input type="text" name="contact" formControlName="contact">
+        <p *ngIf="userForm.get('contact').errors && (form.submitted || userForm.get('contact').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('name').errors.pattern">Please Enter Correct Mobile Number</span>
+        </p>
+    </div>
+    <div>
+        Accept Terms: <input type="checkbox" name="terms" formControlName="terms" />
+        <p *ngIf="userForm.get('terms').errors && (form.submitted || userForm.get('terms').touched)" class="text-danger">
+            <span [hidden]="!userForm.get('terms').errors.required">Please Accept Terms</span>
+        </p>
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</form>

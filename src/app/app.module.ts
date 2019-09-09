@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatabindingComponent } from './databinding/databinding.component';
@@ -20,6 +20,7 @@ import { MasterComponent } from './master/master.component';
 import { DetailsComponent } from './details/details.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { EqualTextValidator } from 'angular2-text-equality-validator';
+import { ModelformComponent } from './modelform/modelform.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +41,14 @@ import { EqualTextValidator } from 'angular2-text-equality-validator';
     MasterComponent,
     DetailsComponent,
     TemplateformComponent,
-    EqualTextValidator
+    EqualTextValidator,
+    ModelformComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
